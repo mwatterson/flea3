@@ -6,3 +6,11 @@
         </description>
     </class>
 </library>
+<library path="lib/libflea3">
+    <class name="flea3/HeaderTriggerNodelet" type="flea3::HeaderTriggerNodelet"
+        base_class_type="nodelet::Nodelet">
+        <description>
+            This is a nodelet for the header trigger mode
+        </description>
+    </class>
+</library>

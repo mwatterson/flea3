@@ -38,8 +38,10 @@ add_library(${PROJECT_NAME}
     src/flea3_setting.cpp
     src/flea3_ros.cpp
     src/single/single_node.cpp
-    src/stereo/stereo_node.cpp
     src/single/single_nodelet.cpp
+    src/stereo/stereo_node.cpp
+    src/header_trigger/header_trigger_node.cpp
+    src/header_trigger/header_trigger_nodelet.cpp
     )
 target_link_libraries(
     ${PROJECT_NAME}
@@ -56,6 +58,9 @@ target_link_libraries(${PROJECT_NAME}_single_node ${PROJECT_NAME})
 
 add_executable(${PROJECT_NAME}_stereo_node src/stereo/stereo_main.cpp)
 target_link_libraries(${PROJECT_NAME}_stereo_node ${PROJECT_NAME})
+
+add_executable(${PROJECT_NAME}_header_trigger src/header_trigger/header_trigger_main.cpp)
+target_link_libraries(${PROJECT_NAME}_header_trigger ${PROJECT_NAME})
 
 add_executable(${PROJECT_NAME}_list_cameras src/list_cameras.cpp)
 target_link_libraries(${PROJECT_NAME}_list_cameras ${PROJECT_NAME})
